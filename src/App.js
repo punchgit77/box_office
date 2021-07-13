@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 // eslint-disable-next-line no-unused-vars
 import Starred from './pages/Starred';
+import Show from './pages/Show'
 
 
 function App() {
@@ -21,6 +22,10 @@ function App() {
          
               <Starred/>
 
+       </Route>
+
+       <Route exact path="/show/:id">
+                 <Show/>
        </Route>
        
        <Route>
