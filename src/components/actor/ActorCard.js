@@ -11,7 +11,7 @@ const ActorCard = ({name,gender,deathday,birthday,country,image}) => (
             <p className="deathday">{deathday?`Died ${deathday}`:'Alive'}</p>
            
              <p>{country?`comes from ${country}`:'no country known'}</p> 
-             <p>______________________________________</p>
+            
              
              
              

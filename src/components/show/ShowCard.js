@@ -9,7 +9,7 @@ import { StyledShowcard } from './ShowCard.styled';
 
 const ShowCard = ({ id,image,name,summary,onstarclick,isstarred}) => {
 
-    const summaryAsText = summary?`${summary.split(' ').slice(0,10).join(' ').replace(/<.+?>/g, '')}...`:'No Description';
+    const summaryAsText = summary?`${summary.split(' ').slice(0,4).join(' ').replace(/<.+?>/g, '')}...`:'No Description';
     
     return(
         <StyledShowcard>
@@ -23,7 +23,7 @@ const ShowCard = ({ id,image,name,summary,onstarclick,isstarred}) => {
                 <button type="button" onClick={onstarclick}><Star active={isstarred}/></button>
                 
             </div>
-            <p>______________________________________</p>
+            {/* <p>______________________________________</p> */}
         </StyledShowcard>
           
     );
