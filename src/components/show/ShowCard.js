@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable no-undef */
-import React from 'react';
+import React,{ memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Star } from '../styled';
 // import {SearchCard} from '../styled'
@@ -29,4 +29,4 @@ const ShowCard = ({ id,image,name,summary,onstarclick,isstarred}) => {
     );
     };
 
-export default ShowCard;
+export default memo(ShowCard);

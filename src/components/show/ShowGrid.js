@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React,{ useCallback } from 'react';
 // import IMAGE_NOT_FOUND from '../../images/not_found.png'
 import { FlexGrid } from '../styled';
 import ShowCard from './ShowCard';
@@ -12,10 +12,10 @@ const ShowGrid = ({data}) => {
          {data.map(({show})=> {
                       const isstarred=starredshows.includes(show.id);
 
-                      const onstarclick=()=>{if(isstarred)
+                      const onstarclick=useCallback(()=>{if(isstarred)
                                                 {dispatchstarred({type:'REMOVE',showId:show.id})}
                                                   else{dispatchstarred({type:'ADD',showId:show.id})}
-                                                 }
+                                                 },[isstarred,show.id])
                          return (
                          <ShowCard 
                          key={show.id} 

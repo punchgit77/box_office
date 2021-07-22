@@ -1,5 +1,5 @@
 /* eslint-disable arrow-body-style */
-import React from 'react';
+import React,{memo} from 'react';
 import { TitleWrapper } from './Title.styled';
 
 const Title = ({title1,title2,title3,subtitle}) => 
@@ -12,4 +12,4 @@ const Title = ({title1,title2,title3,subtitle}) =>
         );
     }
 
-export default Title;
+export default memo(Title);
